@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Image, StyleSheet, ActivityIndicator } from 'react-native'
+import { Text, Image, StyleSheet, Linking } from 'react-native'
 import { Container, Content, Input, Button } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Spinner from 'react-native-loading-spinner-overlay';
@@ -167,7 +167,8 @@ class Register extends Component {
                                     backgroundColor: "#ffffff",
                                     marginTop: 15,
                                     alignSelf: 'center'
-                                }}>
+                                }}
+                                    onPress={() => Linking.openURL('http://localhost:8000/login')}>
                                     <Image source={require('../images/btn_google.png')} style={{
                                         width: '100%',
                                         height: 32.7,
